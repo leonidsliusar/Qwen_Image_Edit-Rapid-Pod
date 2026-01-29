@@ -1,19 +1,12 @@
 import base64
-import mimetypes
 import os
-import re
-from pathlib import Path
 from time import sleep
-
-import boto3
 import requests
 from dotenv import load_dotenv
 import logging
 
 load_dotenv()
 
-STORAGE_PATH = "/runpod-volume"
-LOCAL_STORAGE = Path(__file__).parent / "images"
 logger = logging.getLogger(__name__)
 
 class Client:
